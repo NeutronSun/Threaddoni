@@ -7,7 +7,7 @@ public class MainThread {
     public static void main(String[] args) throws Exception {
         BigInteger n = new  BigInteger("1");
 		//n = n.pow(1);
-		BigInteger end = new  BigInteger("100000");
+		BigInteger end = new  BigInteger("100");
 		//end = end.pow(5);
 		BigInteger cont = new BigInteger("0");
         Fermat fermano = new  Fermat(end.intValue());
@@ -19,24 +19,21 @@ public class MainThread {
         t1.setName("T1");
         t2.setName("T2");
         t3.setName("T3");
-        t4.setName("T4");
+        //t4.setName("T4");
         t1.start();
         t2.start();
         t3.start();
         Thread.currentThread().sleep(500);
-        t4.start();
-        
-        Thread.currentThread().sleep(5000);
-    
-        for(int i = 0; i < end.intValue(); i++){
-            System.out.print(i + "  ");
-            for(BigInteger j = new BigInteger("0"); j.min(BigInteger.valueOf(2)).equals(j); j = j.add(BigInteger.ONE)){
-                System.out.print(fermano.values[i][j.intValue()] + " ");
-    
-            }
-            if(fermano.values[i][0] == null && fermano.values[i][1] == null && fermano.values[i][2] == null)
-            break;
-            System.out.println("");	
+        //t4.start();
+        /*
+        for(int i = 0; i < 10; i++) {
+            System.out.println(i);
+            Thread.currentThread().sleep(1000);
+        }
+        */
+        fermano.mergeArray();
+        for(int i = 0; i < fermano.finalValues.size(); i++) {
+            System.out.println(fermano.finalValues.get(i));
         }
         
     }

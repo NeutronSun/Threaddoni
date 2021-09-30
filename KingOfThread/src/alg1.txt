@@ -1,0 +1,8 @@
+60|Prime: 313   1
+61|Prime: 317   2        
+62|Prime: 331 
+63|Prime: 337   4
+64|Prime: 341   5
+65|Prime: 347
+66|Prime: 349
+

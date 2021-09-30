@@ -16,8 +16,10 @@ public class Threaddozzo implements Runnable{
     /*
     [11][11][11]
     [13][13][13]
-    [15][15][15]
-    [17][17][15]
+    [337][317][15] 3 3 3
+    [341][331][17] 3 4 4
+    [347][349][19] 4 5 5
+    [23][349][21]
     */
 
     public void run() {
@@ -26,6 +28,8 @@ public class Threaddozzo implements Runnable{
             if(fermano.values[i.intValue()][0].equals(fermano.values[i.intValue()][1]) 
             && fermano.values[i.intValue()][1].equals(fermano.values[i.intValue()][2])){
                 System.out.println(fermano.values[i.intValue()][1] + " è un god");
+            }else{
+                
             }
             
         }
